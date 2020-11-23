@@ -47,37 +47,46 @@ def content_book(request, book_num):
             return JsonResponse(list(coll.find())[0]["book"][book], safe=False)
 
 
-def content_canons(request, book_num):
-    pass
+# def content_book(request, book_num, part_num, section_num):
+#     client = pymongo.MongoClient(conf["db"])
+#     db = client["codex"]
+#     coll = db["api_content"]
 
+#     books = ["book-1_general-principles-of-canon-law",
+#             "book-2_laws-concerning-persons"]
 
-# def book(request, book_num):
-#     codex = Content.objects.all()
-#     codex = codex[0].__dict__["book"]
-#     books_keys = list(codex.keys())
-#     book = codex[books_keys[book_num-1]]
+#     for book in books:
+#         if book.find(book_num) != -1:
 
-#     option = request.GET.get('option')
+            # return JsonResponse(list(coll.find())[0]["book"][book], safe=False)
 
-#     if option:
-#         book = codex[books_keys[book_num-1]]
-#         keys = list(book.keys())
-#         if option == "canons-top":
-#             d = {}
-#             for key in keys:
-#                 if key.find("canon-") != -1:
-#                     d[key] = book[key]
+            # def book(request, book_num):
+            #     codex = Content.objects.all()
+            #     codex = codex[0].__dict__["book"]
+            #     books_keys = list(codex.keys())
+            #     book = codex[books_keys[book_num-1]]
 
-#             return JsonResponse(d, safe=False)
+            #     option = request.GET.get('option')
 
-#         if option == "canons-top-names":
-#             l = []
-#             for key in keys:
-#                 if key.find("canon-") != -1:
-#                     l.append(key.replace("-", " ").title())
+            #     if option:
+            #         book = codex[books_keys[book_num-1]]
+            #         keys = list(book.keys())
+            #         if option == "canons-top":
+            #             d = {}
+            #             for key in keys:
+            #                 if key.find("canon-") != -1:
+            #                     d[key] = book[key]
 
-#             return JsonResponse(l, safe=False)
+            #             return JsonResponse(d, safe=False)
 
-#     if option is None:
-#         return JsonResponse(book, safe=False)
-#         # return JsonResponse(None, safe=False)
+            #         if option == "canons-top-names":
+            #             l = []
+            #             for key in keys:
+            #                 if key.find("canon-") != -1:
+            #                     l.append(key.replace("-", " ").title())
+
+            #             return JsonResponse(l, safe=False)
+
+            #     if option is None:
+            #         return JsonResponse(book, safe=False)
+            #         # return JsonResponse(None, safe=False)

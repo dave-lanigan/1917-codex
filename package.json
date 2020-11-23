@@ -1,0 +1,28 @@
+{
+  "name": "1917-codex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development ./codex/fcontent/src/index.js --output-path ./codex/fcontent/static/fcontent/assets/js",
+    "build": "webpack --mode production ./codex/fcontent/src/index.js --output ./codex/fcontent/static/fcontent/assets/js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "babel-loader": "^8.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "react-infinite-scroll-component": "^5.1.0",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

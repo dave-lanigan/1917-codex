@@ -1,10 +1,11 @@
 # Website and REST API for the 1917 Code of Canon Law
 
-This website allows for the display and searchability of the 1917 Codex. There is also an API used to design the website and openn to help distribute the Codex's contents.
+This [website](iudicabit.mywire.org) allows for the display and searchability of the 1917 Codex. There is also an API used to design the website and openn to help distribute the Codex's contents.
 
 
-### Root endpoint:
+### Root endpoint (temporary):
 
+www.iudicabit.mywire.org/api/v0/
 
 ### Public Endpoints:
 

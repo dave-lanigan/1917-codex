@@ -24,14 +24,19 @@ def get_num(tag):
 
 
 def all(request, format=None):
-    pass
     client = pymongo.MongoClient(conf["db"])
     db = client["codex"]
     coll = db["api_content"]
-
-    print(list(coll.find()))
-
     return JsonResponse(list(parse_bson(coll.find()))[0]["book"], safe=False)
+
+
+def canons(request, format=None):
+    client = pymongo.MongoClient(conf["db"])
+    db = client["codex"]
+    coll = db["canons"]
+    out = coll.find()
+
+    return JsonResponse(parse_bson(coll.find()), safe=False)
 
 
 def content_book(request, book_num):
@@ -40,7 +45,10 @@ def content_book(request, book_num):
     coll = db["api_content"]
 
     books = ["book-1_general-principles-of-canon-law",
-             "book-2_laws-concerning-persons"]
+             "book-2_laws-concerning-persons",
+             "book-3_sacred-things",
+             "book-4_canonical-trials",
+             "book-5_offences-and-penalties"]
 
     for book in books:
         if book.find(book_num) != -1:

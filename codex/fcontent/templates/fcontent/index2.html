@@ -6,149 +6,336 @@
     <title>1917 Codex</title>
     <!-- Meta -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">    
+    <meta name="author" content="David Lanigan dav.lanigan@gmail.com">    
     <link rel="shortcut icon" href="favicon.ico">  
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel='stylesheet' type='text/css'>
     <!-- FontAwesome JS -->
     <script defer src={% static "assets/fontawesome/js/all.js" %}></script>
     <!-- Global CSS -->
     <link rel="stylesheet" href={% static "assets/plugins/bootstrap/css/bootstrap.min.css" %}>   
-    <!-- Plugins CSS -->    
-    <link rel="stylesheet" href={% static "assets/plugins/prism/prism.css" %}>
-    <link rel="stylesheet" href={% static "assets/plugins/elegant_font/css/style.css" %}>  
-      
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href={% static "assets/css/styles.css" %}>
     
+    <style>
+
+        html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, ul, i, center, fieldset, form, label, legend, caption {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 12px;
+            }
+        li{
+            margin: 2px;
+        }
+
+        a{
+            text-decoration: none !important;
+        }
+
+        #jimski {
+            background-color: aquamarine !important;
+        }
+
+        #sidebar{
+            font-size:14px;
+        }
+        
+        .container{
+            margin: 3%;
+        }
+
+        .container1{
+            margin: 3%;
+        }
+        .container2{
+            margin-top: 3%;
+        }
+
+        #book-title{
+            margin-bottom:5%;
+        }
+
+        
+        #arrowControl{
+
+        }
+        
+        .branding {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            }
+
+            .branding .logo {
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 0;
+            }
+
+            .branding .logo a {
+            text-decoration: none;
+            }
+
+            /* .branding .text-highlight {
+            color: #40babd;
+            } */
+        
+
+            /* .codex{
+                margin-top:3px;
+                margin-top:3px;
+            }
+
+            .headings{
+                margin-top:7px;
+                margin-bottom:7px;
+
+            } */
+
+    </style>
+
 </head> 
 
-<body class="body-green">
-    <div class="page-wrapper">
-       
+<body>
+    <div>
                 <!-- ******Header****** -->
-        <header class="header text-center">
-            <div class="container">
-                <div class="branding">
-                    <h1 class="logo">
-                        <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                        <span class="text-highlight">1917</span><span class="text-bold"> Code of Canon Law</span>
-                    </h1>
-                </div><!--//branding-->
-                <div class="tagline">
-                    <p>Free Bootstrap 4 theme for your project documentation</p>
-                    <p>Designed with <i class="fas fa-heart"></i> for developers</p>
-                </div><!--//tagline-->
-                
-	             <div class="main-search-box pt-3 pb-4 d-inline-block">
-	                 <form class="form-inline search-form justify-content-center" action="" method="get">
-	            
-			            <input type="text" placeholder="Enter search terms..." name="search" class="form-control search-input">
-			            
-			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
-			            
-			        </form>
-                 </div>
+        <header class="header">
+            <div class="container2">
+                <div id="jimmy" class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-column">
+                        <div class="branding">
+                            <h1 class="logo">
+                                <i style="color:#006994;" class="far fa-file-alt"></i>
+                                <span><b>Code of Canon Law</b></span>
+                            </h1>
+                        </div><!--//branding-->
+                        <div>
+                            <p>The 1917 Pio-Benedictine Code of Canon Law.</p>
+                        </div><!--//tagline-->
+                        
+                        <div class="main-search-box pt-3 pb-4 d-inline-block">
+                            <form class="form-inline search-form justify-content-center" action="/canon-search" method="get">
+                        
+                                <input type="text" placeholder="Search all canons..." name="search" class="form-control search-input">
+                                
+                                <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div><!--//container-->
         </header><!--//header-->
-
-
-        <div class="doc-wrapper">
-            <div class="container">
+        <hr>
+            <div class="container1">
                 
-                <div class="doc-body row">
+                <div class="row">
 
                 <!--CODEX CONTENT-->
-                    <div class="doc-content col-md-9 col-12 order-1" id="app">
+                    <div class="doc-content col-md-8 col-12 order-1">
+                        <div id="book-title"><h1>The Second Book</h1></div>
+                        <div id="app"></div>
                     </div><!--//react doc-content-->
                 <!--CODEX CONTENT-->
                     
-                    
-                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
-                        <div id="doc-nav" class="doc-nav">
+                
+                    <div class="col-md-4 col-12 order-0 d-none d-md-flex">
+                        <div class="container">
+                        <ul id="sidebar" class="nav flex-column">
+                            <li class="nav-item"><a href="{% url 'fcontent:index' %}"><b>Book I:</b> General Principles</a></li>
+                            
+                            <li class="nav-item">
+                                <span class="listSpan" ><a href="#download-section"><b>Book II:</b> Laws Concerning Persons</a><i id="arrowControl" data-toggle="collapse" data-target="#collapse2" class="fas fa-angle-down"></i></span>
+                                <ul class="collapse" id="collapse2">
 
+                                    <li class="nav-item">
+                                        <span class="listSpan"><a href="#part-1_laws-concerning-the-clergy"><b>Part I:</b> Laws Concerning the Clergy</a><i data-toggle="collapse" data-target="#collapsePart1Laws" class="fas fa-angle-down"></i></span>
+                                        <ul class="collapse" id="collapsePart1Laws">
+                                                
+                                                <li class="nav-item"><!-- start section1 element-->
+                                                    <span><a href="#section-1_the-clergy-in-general"><b>Section I:</b> The Clergy in General </a><i data-toggle="collapse" data-target="#collapseSection1Clergy" class="fas fa-angle-down"></i></span>
+                                                    <ul class="collapse" id="collapseSection1Clergy">
+                                                        <li class="nav-item"><a href="#title-1_manner-of-ascribing-the-clergy-to-a-diocese"><b>Title I:</b> Manner of Ascribing the Clergy</a></li>
+                                                        <li class="nav-item"><a href="#title-2_the-rights-and-privileges-of-clerics"><b>Title II:</b> The Rights and Privileges of Clerics</a></li>
+                                                        <li class="nav-item"><a href="#title-3_obligations-of-clerics"><b>Title III:</b> Obligations of Clerics</a></li>
+                                                        <li class="nav-item"><a href="#title-4_ecclesiastical-offices"><b>Title IV:</b> Ecclesiastical Offices</a></li>
+                                                        <li class="nav-item"><a href="#title-5_ordinary-and-delegated-jurisdiction"><b>Title V:</b> Manner of Ascribing the Clergy</a></li>
+                                                        <li class="nav-item"><a href="#title-6_reduction-of-clerics-to-the-state-of-the-laity"><b>Title VI:</b> Reduction of Clerics to the State of the Laity</a></li>
+                                                    </ul> <!-- end section 1 list -->
+                                                </li> <!-- end section 1 list element -->
 
-	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
-                                    <a class="nav-link scrollto" href="#download-section">Book I</a>
-                                    <nav class="doc-sub-menu nav flex-column">
-                                        <a class="nav-link scrollto" href="#step1">Step One</a>
-                                        <a class="nav-link scrollto" href="#step2">Step Two</a>
-                                        <a class="nav-link scrollto" href="#step3">Step Three</a>
-                                    </nav><!--//nav-->
-	                                <a class="nav-link scrollto" href="#installation-section">Book II</a>
-                                    <nav class="doc-sub-menu nav flex-column">
-                                        <a class="nav-link scrollto" href="#part-1_laws-concerning-the-clergy">part i</a>
-                                        <a class="nav-link scrollto" href="#step2">Step Two</a>
-                                        <a class="nav-link scrollto" href="#step3">Step Three</a>
-                                    </nav><!--//nav-->
-	                                <a class="nav-link scrollto" href="#code-section">Code</a>
-                                    <nav class="doc-sub-menu nav flex-column">
-                                        <a class="nav-link scrollto" href="#html">HTML</a>
-                                        <a class="nav-link scrollto" href="#css">CSS</a>
-                                        <a class="nav-link scrollto" href="#sass">Sass</a>
-                                        <a class="nav-link scrollto" href="#less">LESS</a>
-                                        <a class="nav-link scrollto" href="#javascript">JavaScript</a>
-                                        <a class="nav-link scrollto" href="#python">Python</a>
-                                        <a class="nav-link scrollto" href="#php">PHP</a>
-                                        <a class="nav-link scrollto" href="#handlebars">Handlebars</a>
-                                    </nav><!--//nav-->
-	                                <a class="nav-link scrollto" href="#callouts-section">Callouts</a>
-	                                <a class="nav-link scrollto" href="#tables-section">Tables</a>
-	                                <a class="nav-link scrollto" href="#buttons-section">Buttons</a>
-	                                <a class="nav-link scrollto" href="#video-section">Video</a>
-                                    <a class="nav-link scrollto" href="#icons-section">Icons</a>
+                                                <li class="nav-item"> <!--start section 2 element-->
+                                                    <span><a href="#section-2_clerics-individually"><b>Section II:</b> Clerics Individually</a><i data-toggle="collapse" data-target="#collapseSection2Clerics" class="fas fa-angle-down"></i></span>
+                                                    <ul class="collapse" id="collapseSection2Clerics">
+                                                        <li class="nav-item">
+                                                            <span><a href="#title-7_the-supreme-authority-and-those-who-by-law-share-in-it"><b>Title VII:</b> The Supreme Authority</a><i data-toggle="collapse" data-target="#collapseTitle6Supreme" class="fas fa-angle-down"></i></span>
+                                                            <ul class="collapse" id="collapseTitle6Supreme">
+                                                                <li class="nav-item"><a href="#chapter-1_the-roman-pontiff"><b>Chapter I:</b> The Roman Pontiff</a></li>
+                                                                <li class="nav-item"><a href="#chapter-2_the-general-council"><b>Chapter II:</b> The General Council</a></li>
+                                                                <li class="nav-item"><a href="#chapter-3_the-cardinals-of-the-holy-roman-church"><b>Chapter III:</b> The Cardinals</a></li>
+                                                                <li class="nav-item">
+                                                                    <span><a href="#chapter-3-the-cardinals-of-the-holy-roman-church"><b>Chapter IV:</b> The Roman Curia</a><i data-toggle="collapse" data-target="#collapseChapter4Roman" class="fas fa-angle-down"></i></span>
+                                                                    <ul class="collapse" id="collapseChapter4Roman">
+                                                                        <li><a href="#article-1_the-roman-congregations"><b>Article I:</b> The Roman Congregations</a></li>
+                                                                        <li><a href="#article-2_tribunals-of-the-roman-curia"><b>Article II:</b> Tribunals of the Roman Curia</a></li>
+                                                                        <li><a href="#article-3_offices-of-the-roman-curia"><b>Article III:</b> Offices of the Roman Curia</a></li>
+                                                                    </ul><!-- chapter 4 list -->
+                                                                </li><!-- chapter 4 list element -->
+                                                                <li><a href="#chapter-5_legates-of-the-roman-pontiff"><b>Chapter V:</b> Legates of the Roman Pontiff</a></li>
+                                                                <li><a href="#chapter-6_patriarchs,-primates,-metropolitans"><b>Chapter VI:</b> Patriarchs, Primates, Metropolitans</a></li>
+                                                                <li><a href="#chapter-7_plenary-and-provincial-councils"><b>Chapter VII:</b> Plenary and Provincial Councils</a></li>
+                                                                <!-- <li><a class="nav-link scrollto" href="#chapter-7-plenary-and-provincial-councils">Chapter VII: Administrators Apostalic Church</a></li> -->
+                                                                <li><a href="#chapter-9_administrators-apostolic"><b>Chapter IV:</b> Administrators Apostalic Church</a></li>
+                                                                <li><a href="#chapter-10_inferior-prelates"><b>Chapter X:</b> Inferior Prelates</a></li>
+                                                            </ul><!-- section 2 list -->
+                                                        </li><!-- section 2 list element -->
+
+                                                        <li class="nav-item">
+                                                            <span><a href="#title-8_episcopal-jurisdiction-and-participants-of-the-same"><b>Title VIII:</b> Episcopal Jurisdiction</a><i data-toggle="collapse" data-target="#collapseTitle7Episcopal" class="fas fa-angle-down"></i></span>
+                                                            <ul class="collapse" id="collapseTitle7Episcopal">
+                                                                <li class="nav-item"><a href="#chapter-1_bishops"><b>Chapter I:</b> Bishops</a></li>
+                                                                <li class="nav-item"><a href="#chapter-2_coadjutors-and-auxiliary-bishops"><b>Chapter II:</b> CoAdjutors and Auxiliary Bishops</a></li>
+                                                                <li class="nav-item"><a href="#chapter-3_the-cardinals-of-the-holy-roman-church"><b>Chapter III:</b> The Diocesan Synod</a></li>
+                                                                <li class="nav-item">
+                                                                    <span><a href="#chapter-4_the-diocesan-curia"><b>Chapter IV:</b> The Diocesan Curia</a><i data-toggle="collapse" data-target="#collapseChapter4Diocesan" class="fas fa-angle-down"></i></span>
+                                                                    <ul class="collapse" id="collapseChapter4Diocesan">
+                                                                        <li><a href="#article-1_the-vicar-general"><b>Article I:</b> The Vicar General</a></li>
+                                                                        <li><a href="#article-2_the-chancellor,-other-notaries,-the-episcopal-archives"><b>Article II:</b> The Chancellor, Other Notaries, The Episcopal Archives</a></li>
+                                                                        <li><a href="#article-3_-synodal-examiners-and-parochial-con-suitors"><b>Article III:</b> Synodcal Examiners</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <!-- <li><a href="#article-1_the-vicar-general">Chapter V: Legates of the Roman Pontiff</a></li> -->
+                                                                <li><a href="#chapter-6_diocesan-consultors">Chapter VI: Diocesan Consultors</a></li>
+                                                                <li><a href="#chapter-7_obstruction-in-the-government,-vacancy-of-the-episcopal-see,-the-vicar-capitular">Chapter VII: Obstruction in the Government</a></li>
+                                                                <li><a href="#chapter-8_deans">Chapter VII: Deans</a></li>
+                                                                <li><a href="#chapter-9_pastors">Chapter IV: Pastors</a></li>
+                                                                <li><a href="#chapter-10_parochial-vicars">Chapter X: Parochials Vicars</a></li>
+                                                                <li><a href="#chapter-11_rectors-of-churches">Chapter XI: Rectors of Churches</a></li>
+                                                            </ul><!-- end title 8 episcopal lsit -->
+                                                        </li><!-- end title 8 episcopal element -->
+
+                                                    </ul>
+                                                </li>
+
+                                        </ul>
+                                    </li>
                                     
-	                            </nav><!--//doc-menu-->
-                        </div>
-                    </div><!--//doc-sidebar-->
+                                    <li class="nav-item">
+                                        <span><a href="#part-2_the-religious"><b>Part II:</b> The Religious</a><i data-toggle="collapse" data-target="#collapsePart2TheReligious" class="fas fa-angle-down"></i></span>
+                                        <ul class="collapse" id="collapsePart2TheReligious">
+                                            <li><a href="#title-9_erection-and-suppression-of-a-religious-organization,-of-a-province,-or-a-house"><b>Title IX:</b> Erection and Suppression of a Religious Organization</a></li>
+                                            <li>
+                                                <span>
+                                                    <a href="#title-10_the-government-of-religious-organizations"><b>Title X:</b> The Government of Religious Organizations</a>
+                                                    <i data-toggle="collapse" data-target="#collapseTitle9TheGovernment" class="fas fa-angle-down"></i>
+                                                </span>
+                                                <ul class="collapse" id="collapseTitle9TheGovernment">
+                                                    <li><a href="#chapter-1_superiors-and-chapters"><b>Chapter I:</b> Superiors and Chapters</a></li>
+                                                    class="nav-item"    <li><a href="#chapter-2_confessors-and-chaplains"><b>Chapter II:</b> Confessors and Chaplains</a></li>
+                                                    <li><a href="#chapter-3_temporal-goods-and-their-administration"><b>Chapter III:</b> Temporal Goods and Their Administration</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <a href="#title-11_admission-into-a-religious-community"><b>Title XI:</b> Admission into a Religious Community</a>
+                                                    <i data-toggle="collapse" data-target="#collapseTitle11Admission" class="fas fa-angle-down"></i>
+                                                </span>
+                                                <ul class="collapse" id="collapseTitle11Admission">
+                                                    <li><a href="#chapter-1_postulate"><b>Chapter I:</b> Postulate</a></li>
+                                                    <li>
+                                                        <span>
+                                                        <a href="#chapter-2_novitiate"><b>Chapter II:</b> Novitiate</a>
+                                                        <i data-toggle="collapse" data-target="#collapseChapter2Novitiate" class="fas fa-angle-down"></i>
+                                                        </span>
+                                                        <ul class="collapse" id="collapseChapter2Novitiate">
+                                                            <li><a href="#article-1_conditions-for-admission"><b>Article I: Conditions for Admission</b> </a></li>
+                                                            <li><a href="#article-2_education-of-the-novices"><b>Article II:</b> Education of Novices</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#chapter-3_religious-profession"><b>Chapter III:</b> Religious Profession</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#title-12_studies-in-clerical-religious-communities"><b>Title XII:</b> Studies in Clerical Religious Communities</a></li>
+                                            
+                                            <li>
+                                                <span>
+                                                    <a href="#title-13_duties-and-privileges-of-religious"><b>Title XIII:</b>Duties and Privileges of Religious</a>
+                                                    <i data-toggle="collapse" data-target="#collapseTitle13Duties" class="fas fa-angle-down"></i>
+                                                </span>
+                                                <ul class="collapse" id="collapseTitle13Duties">
+                                                    <li><a href="#chapter-1_duties"><b>Chapter I:</b> Duties</a></li>
+                                                    <li><a href="#chapter-2_privileges-of-the-religious"><b>Chapter II:</b> Privileges of the Religious</a></li>
+                                                    <li><a href="#chapter-3_duties-and-privileges-of-a-religious-promoted-to-an-eccle-siastical-dignity,-or-to-rectorship-of-a-parish"><b>Chapter III:</b> Duties and Privileges</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a href="#title-14_transition-to-another-order"><b>Title XIV:</b> Transition to Another Order</a></li>
+                                            <li><a href="#title-15_departure-from-religious-life"><b>Title XV:</b> Departure </a></li>
+                                            <li>
+                                                <span>
+                                                    <a href="#title-16_dismissal-of-religious"><b>Title XVII:</b>Dismissal of Religious</a>
+                                                    <i data-toggle="collapse" data-target="#collapseTitle16Dismissal" class="fas fa-angle-down"></i>
+                                                </span>
+                                                <ul class="collapse" id="collapseTitle16Dismissal">
+                                                    <li><a href="#chapter-1_dismissal-of-religious-with-temporary-vows"><b>Chapter I:</b> Duties</a></li>
+                                                    <li><a href="#chapter-2_dismissal-of-religious-with-perpetual-vows-in-non-exempt-clerical-and-in-all-laical-organizations"><b>Chapter II:</b>Dismissal of Religious</a></li>
+                                                    <li><a href="#chapter-3_the-canonical-trial-in-the-dismissal-of-religious-with-per-petual-or-solemn-vows-in-a-clerical-exempt-religious-organization"><b>Chapter II:</b> Privileges of the Religious</a></li>
+                                                    <li><a href="#chapter-4_dismissed-religious-who-had-taken-perpetual-vows"><b>Chapter II:</b> Privileges of the Religious</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#title-17_societies-of-men-or-women-leading-a-community-life-without-vows"><b>Title XVIII:</b> Societies of Men or Women Without Vows</a></li>
+
+                                            
+                                        </ul>
+
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <span><a href="#part-1_laws-concerning-the-clergy"><b>Part III:</b> The Laity</a><i data-toggle="collapse" data-target="#collapsePart3TheLaity" class="fas fa-angle-down"></i></span>
+                                        <ul class="collapse" id="collapsePart3TheLaity">
+                                            <li><a href="#title-18_general-regulations-for-associations-of-the-faithful"><b>Title XVIII:</b> General Regulations</a></li>
+                                            <li>
+                                                <span>
+                                                    <a href="#title-19_particular-regulations-for-associations-of-the-faithful"><b>Title XVIII:</b> Particular Regulations</a>
+                                                    <i data-toggle="collapse" data-target="#collapseTitle18Particular" class="fas fa-angle-down"></i>
+                                                </span>
+                                                <ul class="collapse" id="collapseTitle18Particular">
+                                                    <li><a href="#chapter-1_third-orders-secular"><b>Chapter I:</b> Superiors and Chapters</a></li>
+                                                    <li><a href="#chapter-2_confraternities-and-pious-unions"><b>Chapter II:</b> Confraternities and Pius Unions</a></li>
+                                                    <li><a href="#chapter-3_archconfraternities-and-primary-unions"><b>Chapter III:</b> Archconfraternities and Primary Unions</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+                                </ul><!-- Book II List should include: part I,II,III -->
+                            </li>
+                        </div><!-- //doc-sidebar -->
+                    </div>
 
 
 
                 </div><!--//doc-body-->              
             </div><!--//container-->
-        </div><!--//doc-wrapper-->
 
 <!--  END CONTENT   -->
 
-
-        <div id="promo-block" class="promo-block">
-            <div class="container">
-                <div class="promo-block-inner">
-                    <h3 class="promo-title text-center"><i class="fas fa-heart"></i> <a href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/" target="_blank">Are you an ambitious and entrepreneurial developer?</a></h3>
-                    <div class="row">
-                        <div class="figure-holder col-lg-5 col-md-6 col-12">
-                            <div class="figure-holder-inner">
-                                <a href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/" target="_blank"><img class="img-fluid" src="assets/images/demo/instance-promo.jpg" alt="Instance Theme" /></a>
-                                <a class="mask" href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/"><i class="icon fa fa-heart pink"></i></a>
-                                
-                            </div>
-                        </div><!--//figure-holder-->
-                        <div class="content-holder col-lg-7 col-md-6 col-12">
-                            <div class="content-holder-inner">
-                                <div class="desc">
-                                    <h4 class="content-title"><strong> Instance - Bootstrap 4 Portfolio Theme for Aspiring Developers</strong></h4>
-                                    <p>Check out <a href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/" target="_blank">Instance</a> - a Bootstrap personal portfolio theme I created for developers. The UX design is focused on selling a developer’s skills and experience to potential employers or clients, and has <strong class="highlight">all the winning ingredients to get you hired</strong>. It’s not only a HTML site template but also a marketing framework for you to <strong class="highlight">build an impressive online presence with a high conversion rate</strong>. </p>
-                                    <p><strong class="highlight">[Tip for developers]:</strong> If your project is Open Source, you can use this area to promote your other projects or hold third party adverts like Bootstrap and FontAwesome do!</p>
-                                    <a class="btn btn-cta" href="https://themes.3rdwavemedia.com/bootstrap-templates/portfolio/instance-bootstrap-portfolio-theme-for-developers/" target="_blank"><i class="fas fa-external-link-alt"></i> View Demo</a>
-                                    
-                                </div><!--//desc-->
-                                
-                                
-                                <div class="author"><a href="https://themes.3rdwavemedia.com">Xiaoying Riley</a></div>
-                            </div><!--//content-holder-inner-->
-                        </div><!--//content-holder-->
-                    </div><!--//row-->
-                </div><!--//promo-block-inner-->  
-            </div><!--//container-->
-        </div><!--//promo-block-->
     </div><!--//page-wrapper-->
     
-    <footer id="footer" class="footer text-center">
-        <div class="container">
+    <footer >
+        <div>
             <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            <!-- <small class="copyright">Iudica Me 2020</small> -->
             
         </div><!--//container-->
     </footer><!--//footer-->

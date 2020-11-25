@@ -137,8 +137,15 @@
 
                 <!--CODEX CONTENT-->
                     <div class="doc-content col-md-8 col-12 order-1">
-                        <div id="book-title"><h1>The First Book</h1></div>
-                        <div id="app"></div>
+                        <div id="book-title"><h3>Results:</h3></div>
+                        <div>
+                            {% for result in data  %}
+                            
+                            <p><b>{{result.canon}}: </b>{{result.content}}</p>
+
+                            {% endfor %}
+
+                        </div>
                     </div><!--//react doc-content-->
                 <!--CODEX CONTENT-->
                     
@@ -146,22 +153,11 @@
                     <div class="col-md-4 col-12 order-0 d-none d-md-flex">
                         <div class="container">
                         <ul id="sidebar" class="nav flex-column">
-                            <li class="nav-item">
-                                <span>
-                                    <a href="#book-1_general-principles-of-canon-law"><b>Book I:</b> General Principles</a>
-                                    <i data-toggle="collapse" data-target="#collapse1" class="fas fa-angle-down"></i>
-                                </span>
-                                
-                                <ul class="collapse" id="collapse1">
-                                    <li class="nav-item"><a href="#title-1_principles-of-ecclesiastical-laws">Title I: Principles of Ecclesiastical Laws</a></li>
-                                    <li class="nav-item"><a href="#title-2_customs">Title II: Customs</a></li>
-                                    <li class="nav-item"><a href="#title-3_manner-of-reckoning-time">Title III: Manner of Reckoning</a></li>
-                                    <li class="nav-item"><a href="#title-4_rescripts">Title IV: Rescripts</a</li>
-                                    <li class="nav-item"><a href="#title-5_privileges">Title V: Privileges</a></li>
-                                </ul><!--//nav-->
-                            </li>
-                            
-                            <li class="nav-item"><a href="{% url 'fcontent:book2' %}"><b>Book II:</b> Laws Concerning Persons</a></li>
+                            <li class="nav-item"><a href="#book-1_general-principles-of-canon-law"><b>Book I:</b> General Principles</a></li>
+                            <li class="nav-item"><a href="#book-1_general-principles-of-canon-law"><b>Book II:</b> General Principles</a></li>
+                            <!-- <li class="nav-item"><a href="#book-1_general-principles-of-canon-law"><b>Book I:</b> General Principles</a></li>
+                            <li class="nav-item"><a href="#book-1_general-principles-of-canon-law"><b>Book I:</b> General Principles</a></li>
+                            <li class="nav-item"><a href="#book-1_general-principles-of-canon-law"><b>Book I:</b> General Principles</a></li> -->
                         </div><!-- //doc-sidebar -->
                     </div>
 
@@ -190,7 +186,7 @@
     <script type="text/javascript" src={% static "assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js" %}></script>      
     <script type="text/javascript" src={% static "assets/plugins/stickyfill/dist/stickyfill.min.js" %}></script>                                                             
     <script type="text/javascript" src={% static "assets/js/_main.js" %}></script>
-    <script type="text/javascript" src={% static "assets/js/i1/main.js" %}></script>
+    <!-- <script type="text/javascript" src={% static "assets/js/main.js" %}></script> -->
     
 </body>
 </html> 

@@ -11,7 +11,7 @@ export default function App(props) {
 
   function ggetData() {
       
-    let url="http://127.0.0.1:8000/api/v0/codex/book-2/";
+    let url="http://127.0.0.1:8000/api/v0/codex/book-1/";
 
     return fetch( url ).then( (resp) => resp.json()).then( (json) =>{
         setData( {loading: false, data: json } )

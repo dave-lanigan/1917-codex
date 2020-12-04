@@ -6,12 +6,16 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 export default function App(props) {
   
+  let confPath = "/home/david/Dev/judica-me-additional/1917-codex/config.json";
+  var CONF = JSON.parse(conf_path);
+  
   const [dataInfo, setData] = useState({loading:true, data: null});
 
 
   function ggetData() {
-      
-    let url="http://127.0.0.1:8000/api/v0/codex/book-1/";
+    
+    let url="http://iudicabit.mywire.org/api/v0/codex/book-2/";
+    //let url = CONF["book1"]
 
     return fetch( url ).then( (resp) => resp.json()).then( (json) =>{
         setData( {loading: false, data: json } )

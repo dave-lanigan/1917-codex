@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./codex/fcontent/src/index.js --output-path ./codex/fcontent/static/fcontent/assets/js/i1",
+    "dev": "webpack --mode development ./codex/fcontent/src/index.js --output-path ./codex/fcontent/static/fcontent/assets/js/i2",
     "build": "webpack --mode production ./codex/fcontent/src/index.js --output ./codex/fcontent/static/fcontent/assets/js"
   },
   "keywords": [],

@@ -2,23 +2,24 @@ import React, {Component, useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 //import {Header,Canon} from 'chapters';
 import {Header,Canon} from './chapters';
-import InfiniteScroll from 'react-infinite-scroll-component';
+//import InfiniteScroll from 'react-infinite-scroll-component';
 
 export default function App(props) {
   
-  let confPath = "/home/david/Dev/judica-me-additional/1917-codex/config.json";
-  var CONF = JSON.parse(conf_path);
+  //let confPath = "/home/david/Dev/judica-me-additional/1917-codex/config.json";
+  //var CONF = JSON.parse(conf_path);
   
   const [dataInfo, setData] = useState({loading:true, data: null});
 
 
   function ggetData() {
     
-    let url="http://iudicabit.mywire.org/api/v0/codex/book-2/";
+    //let url="http://iudicabit.mywire.org/api/v0/codex/book-1/";
+    let url="http://localhost:8000/api/v0/codex/book-2/";
     //let url = CONF["book1"]
 
-    return fetch( url ).then( (resp) => resp.json()).then( (json) =>{
-        setData( {loading: false, data: json } )
+    return fetch( url ).then( (resp) => resp.json()).then( (json) =>{ 
+      setData( {loading: false, data: json } )
     }).catch( (error) => console.log(error) )   
 }
 
@@ -74,19 +75,7 @@ export default function App(props) {
     let out = formatData(dataInfo.data)
 
     return(<div className="content-inner">{out.map( el => el )}</div>);
-    
-    // return(
-    //   <div id="scrollableDiv">
-    //   <InfiniteScroll
-    //   dataLength={out.length}
-    //   next={this.fetchMoreData}
-    //   hasMore={true}
-    //   loader={<h4>Loading...</h4>}
-    //   scrollableTarget="scrollableDiv">
-    //   <div className="content-inner">{out.map( el => el )}</div>
-    //   </InfiniteScroll>
-    //   </div>
-    //     );
+
     }
   }
 

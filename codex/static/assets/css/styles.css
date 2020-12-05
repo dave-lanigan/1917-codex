@@ -1,0 +1,37 @@
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  color: #494d55;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.footer {
+  height: 50px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: #006994;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #006994;
+}
+
+a:focus {
+  text-decoration: none;
+}

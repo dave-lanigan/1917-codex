@@ -17,7 +17,7 @@ import json
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-with open(str(BASE_DIR.parent)+"/config.json") as f:
+with open(str(BASE_DIR.parent.parent)+"/codex-config.json") as f:
     conf = json.load(f)
 
 # Quick-start development settings - unsuitable for production

@@ -1,3 +1,4 @@
+from pathlib import Path
 from django.shortcuts import render
 from django.http import JsonResponse
 import regex
@@ -5,8 +6,10 @@ import pymongo
 import json
 
 
-CONF_PATH = "/home/david/Dev/judica-me-additional/1917-codex/config.json"
-with open(CONF_PATH, "r") as f:
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+with open(str(BASE_DIR.parent.parent)+"/codex-config.json") as f:
     conf = json.load(f)
 
 

@@ -16,8 +16,8 @@ export default function App(props) {
     
     //let url="http://iudicabit.mywire.org/api/v0/codex/book-1/";
     //let url="https://cors-anywhere.herokuapp.com/iudicabit.mywire.org/api/v0/codex/book-1/";
-    //let url="http://localhost:8000/api/v0/codex/book-1/";
-    let url="http://35.243.203.173/api/v0/codex/book-2/";
+    let url="http://localhost:8000/api/v0/codex/book-2/";
+    //let url="http://35.243.203.173/api/v0/codex/book-2/";
     //let url = CONF["book1"]
 
     return fetch( url ).then( (resp) => resp.json()).then( (json) =>{ 

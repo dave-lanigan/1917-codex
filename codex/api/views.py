@@ -55,8 +55,10 @@ def content_book(request, book_num):
 
     for book in books:
         if book.find(book_num) != -1:
-            return JsonResponse(list(coll.find())[0]["book"][book], safe=False)
 
+            resp = JsonResponse(list(coll.find())[0]["book"][book], safe=False)
+            resp['Access-Control-Allow-Origin'] = "*"
+            return resp
 
 # def content_book(request, book_num, part_num, section_num):
 #     client = pymongo.MongoClient(conf["db"])

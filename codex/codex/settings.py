@@ -30,7 +30,7 @@ SECRET_KEY = conf["secret-key"]
 DEBUG = True
 
 #ALLOWED_HOSTS = conf["allowed-hosts"]
-ALLOWED_HOSTS = conf["*"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

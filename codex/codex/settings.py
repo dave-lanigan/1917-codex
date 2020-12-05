@@ -135,13 +135,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'fcontent/static/fcontent'),
 )
-
-CORS_ALLOW_ALL_ORIGINS = True
-
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:80",
-#     "http://127.0.0.1:80",
-#     "http://localhost:8000",
-#     "http://127.0.0.1:8000",
-# ]
+CORS_ORIGIN_ALLOW_ALL = True # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8000',
+    'http://35.243.203.173',
+    'http://35.243.203.173:1',
+] # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
+CORS_ORIGIN_REGEX_WHITELIST = [
+        'http://localhost:8000',
+    'http://35.243.203.173',
+    'http://35.243.203.173:1',
+]
 

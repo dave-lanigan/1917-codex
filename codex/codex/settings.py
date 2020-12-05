@@ -136,11 +136,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'fcontent/static/fcontent'),
 )
 
-<<<<<<< HEAD
-#CORS_ALLOW_ALL_ORIGINS = True
-=======
 CORS_ALLOW_ALL_ORIGINS = True
->>>>>>> 0f1c76e6f6f0a56f4958829eaf4f22997e1e20c4
+
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:80",
 #     "http://127.0.0.1:80",
@@ -148,32 +145,3 @@ CORS_ALLOW_ALL_ORIGINS = True
 #     "http://127.0.0.1:8000",
 # ]
 
-<<<<<<< HEAD
-# CORS_ALLOWED_ORIGIN_REGEXES = [
-#     "http://localhost:8000",
-#     r"^http://localhost:8000/api/v0/codex/book-1/$",
-#     r"^http://localhost:8000/api/v0/codex/book-1$",
-# ]
-=======
-CORS_ALLOW_METHODS = (
-    'GET',
-    'OPTIONS',
-    'POST'
-)
-
-CORS_ALLOW_HEADERS = (
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-    'Access-Control-Allow-Origin',
-)
-
-CORS_ALLOW_CREDENTIALS=True
-
->>>>>>> 0f1c76e6f6f0a56f4958829eaf4f22997e1e20c4

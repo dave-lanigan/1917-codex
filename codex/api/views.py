@@ -57,7 +57,7 @@ def content_book(request, book_num):
         if book.find(book_num) != -1:
 
             resp = JsonResponse(list(coll.find())[0]["book"][book], safe=False)
-            #resp['Access-Control-Allow-Origin'] = "*"
+            resp['Access-Control-Allow-Origin'] = "http://35.243.203.173"
             return resp
 
 # def content_book(request, book_num, part_num, section_num):
@@ -103,3 +103,18 @@ def content_book(request, book_num):
             #     if option is None:
             #         return JsonResponse(book, safe=False)
             #         # return JsonResponse(None, safe=False)
+
+
+"""
+CORS Comments:
+
+            resp = JsonResponse(list(coll.find())[0]["book"][book], safe=False)
+            resp['Access-Control-Allow-Origin'] = "http://127.0.0.1:8000"
+            return resp
+
+            can control it with this code.
+            for this localhost=/=127.0.0.1
+
+            look for that in the response headers in the network tab of chrome.
+
+"""

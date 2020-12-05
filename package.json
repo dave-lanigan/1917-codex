@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./codex/fcontent/src/index.js --output-path ./codex/fcontent/static/fcontent/assets/js/i2",
-    "build": "webpack --mode production ./codex/fcontent/src/index.js --output ./codex/fcontent/static/fcontent/assets/js"
+    "dev": "webpack --mode development ./codex/fcontent/src/index.js --output-path ./codex/fcontent/static/fcontent/assets/js/i1",
+    "build": "webpack --mode production ./codex/fcontent/src/index.js --output-path ./codex/fcontent/static/fcontent/assets/js/i2"
   },
   "keywords": [],
   "author": "",
@@ -27,5 +27,6 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
-  }
+  },
+  "proxy": "http://localhost:8000"
 }

@@ -136,9 +136,15 @@ STATICFILES_DIRS = (
 )
 
 #CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:80",
-    "http://127.0.0.1:80",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:80",
+#     "http://127.0.0.1:80",
+#     "http://localhost:8000",
+#     "http://127.0.0.1:8000",
+# ]
+
+# CORS_ALLOWED_ORIGIN_REGEXES = [
+#     "http://localhost:8000",
+#     r"^http://localhost:8000/api/v0/codex/book-1/$",
+#     r"^http://localhost:8000/api/v0/codex/book-1$",
+# ]

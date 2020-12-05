@@ -29,7 +29,7 @@ SECRET_KEY = conf["secret-key"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = conf["allowed-hosts"]
 
 
 # Application definition

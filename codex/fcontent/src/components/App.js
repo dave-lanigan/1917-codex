@@ -74,6 +74,7 @@ export default function App(props) {
   // }
    
   if (dataInfo.loading==true){  
+    console.log("WHAT THE FUCKKKKKK")
     ggetData();
     return(<div className="loader center">Loading...</div>);}
   

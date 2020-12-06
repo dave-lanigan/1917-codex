@@ -20,9 +20,10 @@ export default function App(props) {
     let url="http://35.243.203.173/api/v0/codex/book-2/";
     //let url="/api/v0/codex/book-2/";
     //let url = CONF["book1"]
-
-    return fetch( url ).
-    then( (resp) => resp.json()).then( (json) =>{ 
+    console.log("fucking here.");
+    return fetch( url )
+    .then( (resp) => resp.json())
+    .then( (json) =>{ 
       setData( {loading: false, data: json } )
     }).catch( (error) => {
       console.log("fuck")

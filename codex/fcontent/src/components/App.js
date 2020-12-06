@@ -15,9 +15,9 @@ export default function App(props) {
   function ggetData() {
     
     //let url="https://cors-anywhere.herokuapp.com/http://iudicabit.mywire.org/api/v0/codex/book-1/";
-    //let url="http://iudicabit.mywire.org/api/v0/codex/book-1/";
+    let url="http://iudicabit.mywire.org/api/v0/codex/book-1/";
     //let url="http://localhost:8000/api/v0/codex/book-1/";
-    let url="http://35.243.203.173/api/v0/codex/book-2/";
+    //let url="http://35.243.203.173/api/v0/codex/book-2/";
     //let url="/api/v0/codex/book-2/";
     //let url = CONF["book1"]
     console.log("fucking here.");

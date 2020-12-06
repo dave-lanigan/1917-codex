@@ -21,9 +21,12 @@ export default function App(props) {
     let url="/api/v0/codex/book-2/";
     //let url = CONF["book1"]
 
-    return fetch( url ).then( (resp) => resp.json()).then( (json) =>{ 
+    return fetch( url ).
+    then( (resp) => resp.json()).then( (json) =>{ 
       setData( {loading: false, data: json } )
-    }).catch( (error) => console.log(error) )   
+    }).catch( (error) => {
+      console.log("fuck")
+      console.log(error) } )   
 }
 
   function formatData(d){

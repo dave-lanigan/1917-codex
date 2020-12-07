@@ -1,4 +1,4 @@
-# Website and REST API for the 1917 Code of Canon Law
+# Website and REST API for the 1917 Code of Canon Law [in development]
 
 This [website](http://iudicabit.mywire.org) allows for the display and searchability of the 1917 Codex. There is also an API used to design the website and openn to help distribute the Codex's contents.
 

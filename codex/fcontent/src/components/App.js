@@ -6,23 +6,17 @@ import {Header,Canon} from './chapters';
 
 export default function App(props) {
   
-  //let confPath = "/home/david/Dev/judica-me-additional/1917-codex/config.json";
-  //var CONF = JSON.parse(conf_path);
-  
   const [dataInfo, setData] = useState({loading:true, data: null});
 
 
   function ggetData() {
-    console.log("fucking here 1.");
-    let url="http://35.243.203.173/api/v0/codex/book-2/";
+    let url="http://iudicabit.mywire.org/api/v0/codex/book-2/";
 
-    console.log("fucking here 2.");
     fetch( url )
     .then( (resp) => resp.json())
     .then( (json) =>{ 
       setData( {loading: false, data: json } )
     }).catch( (error) => {
-      console.log("fuck")
       console.log(error) } )   
 }
 
@@ -68,8 +62,7 @@ export default function App(props) {
   //   }, []);
   // }
    
-  if (dataInfo.loading==true){  
-    console.log("WHAT THE FUCKKKKKK")
+  if (dataInfo.loading==true){ 
     ggetData();
     return(<div className="loader center">Loading...</div>);}
   

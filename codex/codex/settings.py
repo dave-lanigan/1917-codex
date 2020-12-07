@@ -30,8 +30,6 @@ SECRET_KEY = conf["secret-key"]
 DEBUG = True
 
 ALLOWED_HOSTS = conf["allowed-hosts"]
-#ALLOWED_HOSTS = ["*"]
-
 
 # Application definition
 
@@ -48,9 +46,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -135,16 +132,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'fcontent/static/fcontent'),
 )
-# If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
-# CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ALLOW_CREDENTIALS = True
-# CORS_ORIGIN_WHITELIST = [
-#     'http://localhost:8000',
-#     'http://35.243.203.173',
-#     'http://35.243.203.173:1',
-# ]  # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
-# CORS_ORIGIN_REGEX_WHITELIST = [
-#     'http://localhost:8000',
-#     'http://35.243.203.173',
-#     'http://35.243.203.173:1',
-# ]

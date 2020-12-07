@@ -1,8 +1,7 @@
-import React, {Component, useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
-//import {Header,Canon} from 'chapters';
 import {Header,Canon} from './chapters';
-//import InfiniteScroll from 'react-infinite-scroll-component';
+
 
 export default function App(props) {
   
@@ -55,12 +54,6 @@ export default function App(props) {
     return out;
 
   }
-
-  // function App() {
-  //   useEffect(() => {
-  //     ggetData();
-  //   }, []);
-  // }
    
   if (dataInfo.loading==true){ 
     ggetData();

@@ -5,7 +5,7 @@ This [website](http://iudicabit.mywire.org) allows for the display and searchabi
 
 ### Root endpoint (temporary):
 
-www.iudicabit.mywire.org/api/v0/
+www.iudicabit.mywire.org/api/v0/codex
 
 ### Public Endpoints:
 
